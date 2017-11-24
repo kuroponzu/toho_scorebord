@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
-   protect_from_forgery with: :exception
 
   def home
+    logger.debug("static_pages#home‚Ì’†‚É“ü‚è‚Ü‚µ‚½B")
   end
 end
