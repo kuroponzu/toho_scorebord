@@ -1,0 +1,2 @@
+class CharaYoyomu < ApplicationRecord
+end

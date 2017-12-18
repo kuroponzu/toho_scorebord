@@ -11,11 +11,12 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user=User.find(params[:id])
+    @scorelist=Gamescore.where(user_id: @user.id)
   end
 
   # GET /users/new
   def new
-    logger.debug("user.newの中に入りました。")
+    #logger.debug("user.newの中に入りました。")
     @user = User.new
   end
 
