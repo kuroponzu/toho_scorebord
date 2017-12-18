@@ -1,0 +1,2 @@
+class CharaSeirensen < ApplicationRecord
+end

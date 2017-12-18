@@ -1,5 +1,7 @@
 {
   "name": "toho_scorebord",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^1.9.1"
+  }
 }

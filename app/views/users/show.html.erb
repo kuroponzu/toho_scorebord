@@ -1,0 +1,41 @@
+<%provide(:title,@user.name)%>
+
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+    <h1>
+    <p>プロフィール</p>
+    <%= gravatar_for @user%>
+    <%= @user.name%>
+    <%= @user.email%>
+    <%= link_to '編集', edit_user_path(@user) %>
+    <%= link_to '戻る', users_path %>
+    </h1>
+    </section>
+  </aside>
+
+    <table class="table table-hover">
+      <caption>スコア一覧</caption>
+      <thead>
+        <tr>
+          <th>作品名</th>
+          <th>難易度</th>
+          <th>キャラクター</th>
+          <th>スコア</th>
+          <th>クリア可否</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @scorelist.each do |score|%>
+      <tr>
+        <th><%=score.name%></th>
+        <th><%=score.difficulty%></th>
+        <th><%=score.character%></th>
+        <th><%=score.score%></th>
+        <th><%=score.clear%></th>
+      </tr>
+      <%end%>
+      </tbody>
+    </table>
+</div>

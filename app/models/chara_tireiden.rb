@@ -1,0 +1,2 @@
+class CharaTireiden < ApplicationRecord
+end
