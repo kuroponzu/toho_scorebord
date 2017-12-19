@@ -11,7 +11,9 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user=User.find(params[:id])
-    @scorelist=Gamescore.where(user_id: @user.id)
+    @scorelist=Gamescore.where(user_id: @user.id).
+    group(:name,:difficulty,:character)
+    #binding.pry
   end
 
   # GET /users/new

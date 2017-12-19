@@ -9,14 +9,16 @@
     <%= gravatar_for @user%>
     <%= @user.name%>
     <%= @user.email%>
+    <br>
     <%= link_to '編集', edit_user_path(@user) %>
+    <br>
     <%= link_to '戻る', users_path %>
     </h1>
     </section>
   </aside>
 
     <table class="table table-hover">
-      <caption>スコア一覧</caption>
+      <caption>最新登録スコア一覧</caption>
       <thead>
         <tr>
           <th>作品名</th>
