@@ -2,17 +2,22 @@
 
 
 <div class="row">
-  <aside class="col-md-4">
+  <aside class="col-md-6">
     <section class="user_info">
     <h1>
     <p>プロフィール</p>
     <%= gravatar_for @user%>
-    <%= @user.name%>
-    <%= @user.email%>
-    <br>
     <%= link_to '編集', edit_user_path(@user) %>
-    <br>
     <%= link_to '戻る', users_path %>
+    </section>
+  </aside>
+  <aside class="col-md-6">
+    <section class="user_info">
+    <h1>
+    <p>ユーザーネーム：<%= @user.name%></p>
+    <p>メールアドレス：<%= @user.email%></p>
+    <p>コメント</p>
+    <%= @user.comment%>
     </h1>
     </section>
   </aside>

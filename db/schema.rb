@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171218191812) do
+ActiveRecord::Schema.define(version: 20171220133606) do
 
   create_table "chara_eiyashos", force: :cascade do |t|
     t.string "character"
@@ -119,6 +119,7 @@ ActiveRecord::Schema.define(version: 20171218191812) do
     t.datetime "activeted_at"
     t.string "reset_digest"
     t.datetime "reset_sent_at"
+    t.text "comment"
   end
 
 end
