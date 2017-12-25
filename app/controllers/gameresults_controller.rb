@@ -27,7 +27,6 @@ class GameresultsController < ApplicationController
     @gameresult.user_id = session[:user_id]
     @gameresult.attributes = {gamedetail_id: @gamedetail_id,score: params[:gameresult][:score],clear: params[:gameresult][:clear]}
     #@gameresult.user_id = session[:user_id]
-    binding.pry
     @gameresult.save!
       flash[:success] = "スコア登録が完了しました!"
     #end
