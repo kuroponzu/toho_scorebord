@@ -1,2 +1,0 @@
-class CharaSinreibyo < ApplicationRecord
-end

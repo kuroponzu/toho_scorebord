@@ -6,32 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
- Difficulity1.create!(difficult:"Easy")
- Difficulity1.create!(difficult:"Normal")
- Difficulity1.create!(difficult:"Hard")
- Difficulity1.create!(difficult:"Lunatic")
- Difficulity1.create!(difficult:"Extra")
-
- Difficulity2.create!(difficult:"Easy")
- Difficulity2.create!(difficult:"Normal")
- Difficulity2.create!(difficult:"Hard")
- Difficulity2.create!(difficult:"Lunatic")
- Difficulity2.create!(difficult:"Extra")
- Difficulity2.create!(difficult:"Phantasm")
-
-
-  CharaKomakyo.create!(character:"霊符霊夢")
-  CharaKomakyo.create!(character:"夢符霊夢")
-  CharaKomakyo.create!(character:"魔符魔理沙")
-  CharaKomakyo.create!(character:"恋符魔理沙")
-
-  CharaYoyomu.create!(character:"霊符霊夢")
-  CharaYoyomu.create!(character:"夢符霊夢")
-  CharaYoyomu.create!(character:"魔符魔理沙")
-  CharaYoyomu.create!(character:"恋符魔理沙")
-  CharaYoyomu.create!(character:"幻符咲夜")
-  CharaYoyomu.create!(character:"時符咲夜")
-
+ Gamedetail.create!(gamename:"東方紅魔郷",difficulty:"Easy",character:"霊符霊夢")
+ Gamedetail.create!(gamename:"東方紅魔郷",difficulty:"Normal",character:"霊符霊夢")
+ Gamedetail.create!(gamename:"東方紅魔郷",difficulty:"Hard",character:"霊符霊夢")
+ Gamedetail.create!(gamename:"東方紅魔郷",difficulty:"Lunatic",character:"霊符霊夢")
+ Gamedetail.create!(gamename:"東方紅魔郷",difficulty:"Extra",character:"霊符霊夢")
 
  User.create!(
    name:"下畑翔",

@@ -1,2 +1,0 @@
-class CharaKanzyuden < ApplicationRecord
-end

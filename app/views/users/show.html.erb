@@ -36,11 +36,11 @@
       <tbody>
       <% @scorelist.each do |score|%>
       <tr>
-        <th><%=score.name%></th>
-        <th><%=score.difficulty%></th>
-        <th><%=score.character%></th>
-        <th><%=score.score%></th>
-        <th><%=score.clear%></th>
+        <th><%=score.game_id.gamename%></th>
+        <th><%=score.game_id.difficulty%></th>
+        <th><%=score.game_id.character%></th>
+        <th><%=score.result_id.score%></th>
+        <th><%=score.result_id.clear%></th>
       </tr>
       <%end%>
       </tbody>

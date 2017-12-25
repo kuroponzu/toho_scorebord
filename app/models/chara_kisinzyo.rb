@@ -1,2 +1,0 @@
-class CharaKisinzyo < ApplicationRecord
-end

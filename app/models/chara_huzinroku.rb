@@ -1,2 +1,0 @@
-class CharaHuzinroku < ApplicationRecord
-end

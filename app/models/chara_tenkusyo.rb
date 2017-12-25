@@ -1,2 +1,0 @@
-class CharaTenkusyo < ApplicationRecord
-end

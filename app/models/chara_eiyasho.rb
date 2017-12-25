@@ -1,2 +1,0 @@
-class CharaEiyasho < ApplicationRecord
-end
