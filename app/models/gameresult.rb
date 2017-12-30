@@ -3,6 +3,7 @@ class Gameresult < ApplicationRecord
   belongs_to :user
   belongs_to :gamedetail
   #has_many :gamedetails
+  validates :score ,presence:true
 
   #formで使用するため、attr_accessorを定義
   attr_accessor :difficulty, :character

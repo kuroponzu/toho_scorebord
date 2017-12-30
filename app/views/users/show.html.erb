@@ -1,48 +1,13 @@
 <%provide(:title,@user.name)%>
 
-
-<div class="row">
-  <aside class="col-md-6">
+<div class = "row">
+  <aside class="span4">
     <section class="user_info">
-    <h1>
-    <p>プロフィール</p>
-    <%= gravatar_for @user%>
-    <%= link_to '編集', edit_user_path(@user) %>
-    <%= link_to '戻る', users_path %>
+      <%= render 'shared/user_info'%>
     </section>
-  </aside>
-  <aside class="col-md-6">
-    <section class="user_info">
-    <h1>
-    <p>ユーザーネーム：<%= @user.name%></p>
-    <p>メールアドレス：<%= @user.email%></p>
-    <p>コメント</p>
-    <%= @user.comment%>
-    </h1>
+  </dev>
+  <div class="span8">
+    <section class="score_info">
+      <%= render 'shared/score_info'%>
     </section>
-  </aside>
-
-    <table class="table table-hover">
-      <caption>最新登録スコア一覧</caption>
-      <thead>
-        <tr>
-          <th>作品名</th>
-          <th>難易度</th>
-          <th>キャラクター</th>
-          <th>スコア</th>
-          <th>クリア可否</th>
-        </tr>
-      </thead>
-      <tbody>
-      <% @scorelist.each do |score|%>
-      <tr>
-        <th><%=score.gamedetail.gamename%></th>
-        <th><%=score.gamedetail.difficulty%></th>
-        <th><%=score.gamedetail.character%></th>
-        <th><%=score.score%></th>
-        <th><%=score.clear%></th>
-      </tr>
-      <%end%>
-      </tbody>
-    </table>
-</div>
+  </div>

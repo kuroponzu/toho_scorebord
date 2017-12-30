@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :correct_user,  only: :update
+  before_action :correct_user
 
   # GET /users
   # GET /users.json
@@ -12,11 +12,11 @@ class UsersController < ApplicationController
   def show
     @user=User.find(params[:id])
     @scorelist=Gameresult.where(user_id: @user.id)
+    #binding.pry
   end
 
   # GET /users/new
   def new
-    #logger.debug("user.newの中に入りました。")
     @user = User.new
   end
 

@@ -27,10 +27,13 @@ class GameresultsController < ApplicationController
     @gameresult.user_id = session[:user_id]
     @gameresult.attributes = {gamedetail_id: @gamedetail_id,score: params[:gameresult][:score],clear: params[:gameresult][:clear]}
     #@gameresult.user_id = session[:user_id]
-    @gameresult.save!
+    if @gameresult.save
       flash[:success] = "スコア登録が完了しました!"
-    #end
-    render '/static_pages/list'
+      render '/static_pages/list'
+    else
+      flash[:danger] = "スコア登録が失敗しました。半角数字で入力して下さい。"
+      render '/static_pages/list'
+    end
   end
 
   def update
