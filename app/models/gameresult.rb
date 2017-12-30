@@ -1,6 +1,7 @@
 class Gameresult < ApplicationRecord
   include ActiveModel::Model
   belongs_to :user
+  belongs_to :gamedetail
   #has_many :gamedetails
 
   #formで使用するため、attr_accessorを定義
