@@ -19,7 +19,8 @@
     <th><%=score.score%></th>
     <th><%=score.clear%></th>
     <th><%=convert_to_japantime(score.updated_at)%></th>
-  </tr>
+    <th><%=link_to "削除",gameresults_path(score_id:score.id),method: :delete,
+            data:{confirm:"本当に削除しますか？"},class: "btn btn-xs btn-primary"%></th>
   <%end%>
   </tbody>
 </table>

@@ -18,5 +18,5 @@ end
  User.create!(
    name:"下畑翔",
    email:"pontatanpo@hotmail.co.jp",
-   password:"password"
+   password_digest:"password"
  )

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :correct_user
+  #before_action :correct_user
 
   # GET /users
   # GET /users.json

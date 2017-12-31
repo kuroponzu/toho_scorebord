@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get '/list',to:'static_pages#list'
   get '/gameresults' ,to:'gameresults#new'
   post '/gameresults' ,to:'gameresults#create'
+  delete '/gameresults' ,to:'gameresults#destroy'
 
 end

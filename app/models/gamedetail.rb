@@ -1,3 +1,3 @@
 class Gamedetail < ApplicationRecord
-  #belongs_to :gameresults
+  has_many :gameresults
 end

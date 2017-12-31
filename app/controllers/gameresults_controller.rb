@@ -36,12 +36,14 @@ class GameresultsController < ApplicationController
     end
   end
 
+  def destroy
+    Gameresult.find(params[:score_id]).destroy!
+    #binding.pry
+    flash[:success]="削除が完了しました。"
+    redirect_to current_user
+  end
+
   def update
-    @gamesore.user_id=@user.user_id
-    @series.user_id=@user.user_id
-    @series.score_id=@gamescore.score_id
-    @gamescore.save
-    @series.save
   end
 
   def edit
