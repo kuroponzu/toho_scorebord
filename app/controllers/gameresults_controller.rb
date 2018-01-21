@@ -22,7 +22,6 @@ class GameresultsController < ApplicationController
     @current_user ||= User.new
     @gamedetail_id = Gamedetail.find_by(gamename: params[:gameresult][:name],difficulty: params[:gameresult][:difficulty],character: params[:gameresult][:character]).id
     @gamescoretest = Gameresult.new
-    #binding.pry
     @gameresult = Gameresult.new
     @gameresult.user_id = session[:user_id]
     @gameresult.attributes = {gamedetail_id: @gamedetail_id,score: params[:gameresult][:score],clear: params[:gameresult][:clear]}
@@ -38,9 +37,7 @@ class GameresultsController < ApplicationController
 
   def destroy
     score_id = params[:score_id]
-    binding.pry
-    if Gameresult.find_by(id: score_id).delete
-    #Gameresult.find_by_sql('Delete from Gameresults where id = ?',params[:score_id])
+    if Gameresult.find_by_sql(['Delete from gameresults where id = ?',score_id])
       flash[:success]="削除が完了しました。"
     else
       flash[:false]="削除が失敗しました。"
