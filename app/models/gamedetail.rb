@@ -1,3 +1,3 @@
 class Gamedetail < ApplicationRecord
-  has_many :gameresults dependent: :delete_all
+  has_many :gameresults
 end

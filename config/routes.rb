@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post '/login',to:'sessions#create'
   delete '/logout',to:'sessions#destroy'
   get '/list',to:'static_pages#list'
+  get '/ranking',to:'static_pages#ranking'
   get '/gameresults' ,to:'gameresults#new'
   post '/gameresults' ,to:'gameresults#create'
   delete '/gameresults' ,to:'gameresults#destroy'

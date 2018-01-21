@@ -33,6 +33,8 @@ gem 'bcrypt', '~> 3.1.11'
 gem 'bootstrap-sass','3.3.6'
 gem 'jquery-rails', '4.3.1'
 gem 'jquery-turbolinks'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -44,6 +46,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'pry-rails'
+
 end
 
 group :development do

@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1>ユーザ一覧</h1>
 
+<%= will_paginate%>
 <table>
   <thead>
     <tr>
@@ -10,16 +11,21 @@
   </thead>
 
   <tbody>
+    <ul class = "uses">
     <% @users.each do |user| %>
       <tr>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= gravatar_for user%></td>
+        <td><%= user.name%></td>
+        <td><%= link_to 'スコア閲覧', user %></td>
+        <%if current_user.admin?%>
+        <td><%= link_to '削除', user, method: :delete, data: { confirm: '本当に削除しますか？' } %></td>
+        <%end%>
       </tr>
+    </ul>
     <% end %>
   </tbody>
 </table>
 
-<br>
+<%= will_paginate%>
 
-<%= link_to 'New User', new_user_path %>
+<br>

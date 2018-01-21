@@ -2,9 +2,12 @@
   <p>プロフィール</p>
   <%= gravatar_for @user%>
   <p>ユーザーネーム：<%= @user.name%></p>
-  <p>メールアドレス：<%= @user.email%></p>
-  <p><%= link_to '編集', edit_user_path(@user) %></p>
-
+  <%if current_user == @user%>
+    <p>メールアドレス：<%= @user.email%></p>
+  <%end%>
   <p>コメント</p>
   <%= @user.comment%>
+  <%if current_user == @user%>
+    <p class="text-right"><%= link_to '編集', edit_user_path(@user) ,class: "btn btn-xs btn-primary"%></p>
+  <%end%>
 </h1>
