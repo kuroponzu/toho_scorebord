@@ -37,9 +37,14 @@ class GameresultsController < ApplicationController
   end
 
   def destroy
-    Gameresult.find(params[:score_id]).destroy!
-    #binding.pry
-    flash[:success]="削除が完了しました。"
+    score_id = params[:score_id]
+    binding.pry
+    if Gameresult.find_by(id: score_id).delete
+    #Gameresult.find_by_sql('Delete from Gameresults where id = ?',params[:score_id])
+      flash[:success]="削除が完了しました。"
+    else
+      flash[:false]="削除が失敗しました。"
+    end
     redirect_to current_user
   end
 
