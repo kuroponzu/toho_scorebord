@@ -13,7 +13,6 @@ class GameresultsController < ApplicationController
     group("difficulty").order(:id).select("difficulty")
     @gamecharactor = Gamedetail.where(gamename: @game_title).
     group("character").order(:id).select("character")
-    #binding.pry
   end
 
   def create
@@ -38,9 +37,9 @@ class GameresultsController < ApplicationController
   def destroy
     score_id = params[:score_id]
     if Gameresult.find_by_sql(['Delete from gameresults where id = ?',score_id])
-      flash[:success]="削除が完了しました。"
+      flash[:success]="chinko"
     else
-      flash[:false]="削除が失敗しました。"
+      flash[:false]="unko"
     end
     redirect_to current_user
   end

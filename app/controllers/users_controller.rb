@@ -12,7 +12,6 @@ class UsersController < ApplicationController
   def show
     @user=User.find(params[:id])
     @scorelist=Gameresult.where(user_id: @user.id)
-    #binding.pry
   end
 
   # GET /users/new
